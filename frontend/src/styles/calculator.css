@@ -1,0 +1,43 @@
+/* Calculator-specific animations and responsive design */
+
+.calculator-container {
+    @media (max-width: 640px) {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+}
+
+.calculator-button {
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.calculator-button:active {
+    transform: scale(0.95);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-display {
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Consolas', 'Courier New', monospace;
+    letter-spacing: 0.05em;
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 400px) {
+    .calculator-grid {
+        gap: 0.5rem;
+    }
+
+    .calculator-button {
+        height: 3rem;
+        font-size: 1rem;
+    }
+
+    .calculator-display {
+        font-size: 2rem;
+        padding: 1rem;
+    }
+}
